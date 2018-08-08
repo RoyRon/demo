@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -165,8 +165,8 @@ public class JsonTest {
         JSONArray jsonArray = JSONArray.parseArray(JSON_ARRAY_STR);
 
         //遍历JSONArray
-        List<Student> students = new ArrayList<Student>();
-        Student student = null;
+        List<Student> students = new ArrayList<>();
+        Student student;
         for (Object object : jsonArray) {
 
             JSONObject jsonObjectone = (JSONObject) object;
@@ -199,7 +199,7 @@ public class JsonTest {
         Student student = new Student("lily", 12);
         Student studenttwo = new Student("lucy", 15);
 
-        List<Student> students = new ArrayList<Student>();
+        List<Student> students = new ArrayList<>();
         students.add(student);
         students.add(studenttwo);
 
@@ -225,7 +225,7 @@ public class JsonTest {
      * 复杂JavaBean_obj到json格式字符串的转换
      */
 
-    public void testJavaBeanToComplexJSONStr(){
+    private void testJavaBeanToComplexJSONStr(){
 
         //已知复杂JavaBean_obj
         Teacher teacher = JSONObject.parseObject(COMPLEX_JSON_STR, new TypeReference<Teacher>() {});
@@ -278,7 +278,7 @@ public class JsonTest {
         Student student = new Student("lily", 12);
         Student studenttwo = new Student("lucy", 15);
 
-        List<Student> students = new ArrayList<Student>();
+        List<Student> students = new ArrayList<>();
         students.add(student);
         students.add(studenttwo);
 
@@ -321,7 +321,7 @@ public class JsonTest {
         Student student = new Student("lily", 12);
         Student studenttwo = new Student("lucy", 15);
 
-        List<Student> students = new ArrayList<Student>();
+        List<Student> students = new ArrayList<>();
         students.add(student);
         students.add(studenttwo);
         Course course = new Course("english", 1270);

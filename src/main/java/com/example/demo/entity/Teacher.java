@@ -42,4 +42,5 @@ public class Teacher {
     public void setCourse(Course course) {
         this.course = course;
     }
+
 }
